@@ -21,17 +21,44 @@ class _BusinessCardState extends State<BusinessCard> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  CircleAvatar(
-                    radius: 50.0,
-                    backgroundColor: Colors.red,
+                  Container(
+                    height: 100,
+                    width: 100,
+                    child: Center(
+                      child: _avatarImage == null
+                          ? Text('No image selected.')
+                          : Image.file(_avatarImage),
+                    ),
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Colors.orange,
+                    ),
                   ),
-                  TextButton(onPressed: onPressed, child: child),
+                  Container(height: 50),
+                  Container(
+                    decoration: BoxDecoration(
+                      border: Border.all(color: Colors.black),
+                    ),
+                    child: Text('+1234567'),
+                  ),
+                  Container(height: 50),
+                  Container(
+                    decoration: BoxDecoration(
+                      border: Border.all(color: Colors.black),
+                    ),
+                    child: Text('example@mail.com'),
+                  ),
                 ],
               ),
             ],
           ),
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: getImage,
+          tooltip: 'Pick Image',
+          child: Icon(Icons.add_a_photo),
         ),
       ),
     );
