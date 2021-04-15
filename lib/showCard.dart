@@ -24,8 +24,8 @@ class _BusinessCardState extends State<BusinessCard> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
-                    height: 100,
-                    width: 100,
+                    height: 150,
+                    width: 150,
                     child: Center(
                       child: _avatarImage == null
                           ? Text('No image selected.')
@@ -38,17 +38,39 @@ class _BusinessCardState extends State<BusinessCard> {
                   ),
                   Container(height: 50),
                   Container(
+                    height: 30,
+                    width: 200,
                     decoration: BoxDecoration(
                       border: Border.all(color: Colors.black),
                     ),
-                    child: Text('+1234567'),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Icon(Icons.phone),
+                        Text(
+                          '+99 123456789',
+                          style: TextStyle(fontSize: 20),
+                        ),
+                      ],
+                    ),
                   ),
                   Container(height: 50),
                   Container(
+                    height: 30,
+                    width: 200,
                     decoration: BoxDecoration(
                       border: Border.all(color: Colors.black),
                     ),
-                    child: Text('example@mail.com'),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Icon(Icons.mail),
+                        Text(
+                          'example@mail.com',
+                          style: TextStyle(fontSize: 15),
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
