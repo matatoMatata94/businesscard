@@ -38,6 +38,15 @@ class _BusinessCardState extends State<BusinessCard> {
                   ),
                   Container(height: 50),
                   Container(
+                    child: Text(
+                      'matataMatato94',
+                      style: TextStyle(
+                        fontFamily: 'Pacifico',
+                      ),
+                    ),
+                  ),
+                  Container(height: 50),
+                  Container(
                     height: 30,
                     width: 200,
                     decoration: BoxDecoration(
