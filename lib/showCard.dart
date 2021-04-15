@@ -47,39 +47,44 @@ class _BusinessCardState extends State<BusinessCard> {
                     ),
                   ),
                   Container(height: 30),
-                  Container(
-                    height: 30,
-                    width: 200,
-                    decoration: BoxDecoration(
-                      border: Border.all(color: Colors.black),
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Icon(Icons.phone),
-                        Text(
-                          '+99 123456789',
-                          style: TextStyle(fontSize: 20),
+                  Card(
+                    color: Colors.white,
+                    margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                    child: ListTile(
+                      leading: Icon(
+                        Icons.phone,
+                        color: Colors.teal,
+                      ),
+                      title: Text(
+                        '+99 123456789',
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: Colors.teal[900],
                         ),
-                      ],
+                      ),
                     ),
                   ),
                   Container(height: 30),
-                  Container(
-                    height: 30,
-                    width: 200,
-                    decoration: BoxDecoration(
-                      border: Border.all(color: Colors.black),
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Icon(Icons.mail),
-                        Text(
-                          'example@mail.com',
-                          style: TextStyle(fontSize: 15),
-                        ),
-                      ],
+                  Card(
+                    color: Colors.white,
+                    margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                    child: Padding(
+                      padding: const EdgeInsets.all(15.0),
+                      child: Row(
+                        children: [
+                          Icon(
+                            Icons.mail,
+                            color: Colors.teal,
+                          ),
+                          Text(
+                            'example@mail.com',
+                            style: TextStyle(
+                              fontSize: 20,
+                              color: Colors.teal[900],
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ],
