@@ -9,8 +9,9 @@ class BusinessCard extends StatefulWidget {
 }
 
 class _BusinessCardState extends State<BusinessCard> {
-  File _avatarImage;
   final picker = ImagePicker();
+  File _avatarImage;
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -25,16 +26,16 @@ class _BusinessCardState extends State<BusinessCard> {
                 height: 150,
                 width: 150,
                 child: Center(
-                  child: _avatarImage == null
-                      ? Text('No image selected.')
-                      : Image.file(_avatarImage),
+                  child: _avatarImage != null
+                      ? Image.file(_avatarImage)
+                      : Text('No image selected.'),
                 ),
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   color: Colors.orange,
                 ),
               ),
-              Container(height: 50),
+              SizedBox(height: 50),
               Container(
                 child: Text(
                   'matatoMatata94',
@@ -69,7 +70,7 @@ class _BusinessCardState extends State<BusinessCard> {
                   ),
                 ),
               ),
-              Container(height: 30),
+              SizedBox(height: 30),
               Card(
                 margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
                 child: ListTile(
